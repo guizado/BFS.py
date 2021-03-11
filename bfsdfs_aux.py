@@ -23,43 +23,6 @@ def adjacent(M,n):
     return res
 
 
-# Heap Operations
-# Heaps são implementados com listas 1D
-parent = lambda i: (i-1)//2
-children = lambda i: (2*i+1, 2*i+2)
-
-
-def heapAdd(heap, e):
-    if log(len(heap)+1, 2).is_integer():
-        heap += [-1, -1]
-        heap[-2] = e
-    else:
-        for i,n in enumerate(heap):
-            if n == -1:
-                heap[i] = e
-                break
-
-def heapPop(heap):
-    pop = heap[0]
-    if log(len(heap)+1, 2).is_integer():
-        i = len(heap) - 1
-    else:
-        for i,n in enumerate(heap):
-            if n == -1:
-                if i%2 == 0:
-                    i -= 1
-                else:
-                    i += 1
-    while True:
-        p = parent(i) 
-        # r/estofthefuckingowl
-    
-
-
-
-
-
-
 # BFS não recursivo utilizando uma Queue
 def bfs(M, start, end):
     pred = [-1 for _ in range(N*N)]
@@ -77,39 +40,6 @@ def bfs(M, start, end):
                 q.append(e)
                 adj_history.append(e)
     return [], adj_history
-
-
-def dfs(M, start, end):
-    pred = [-1 for _ in range(N*N)]
-    adj_history = []
-    stack = [start]
-    while len(stack):
-        v = stack.pop(0)
-        if v == end:
-            return pred, adj_history
-        if M[v] != 1:
-            M[v] = 1
-            for e in adjacent(M,v):
-                stack = [e] + stack
-                pred[e] = v
-                adj_history.append(e)
-    return [], adj_history
-
-
-# A* - heap
-def astar(M, start, end):
-    open = [start]
-    closed = []
-    pred = [-1 for _ in range(N*N)]
-    g = [-1 for _ in range(N*N)]
-    g[start] = 0
-    f = [-1 for _ in range(N*N)]
-    f[start] = 1
-    while len(open):
-        return
-
-
-
 
 # Devolve o caminho do inicio ao fim, independentemente do algoritmo utilizado
 def crawlback(pred, end):
