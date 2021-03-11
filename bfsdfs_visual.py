@@ -12,13 +12,13 @@ frame = tk.Frame(root, width=400, height=400,bg='gray')
 frame.place(relx=0.5,rely=0.5,anchor='center')
 
 
-white = ImageTk.PhotoImage(Image.open("white_square.png"))
-black = ImageTk.PhotoImage(Image.open("black_square.png")) 
-blue0 = ImageTk.PhotoImage(Image.open("blue0_square.png")) 
-blue1 = ImageTk.PhotoImage(Image.open("blue1_square.png")) 
-orange = ImageTk.PhotoImage(Image.open("orange_square.png")) 
-yorange = ImageTk.PhotoImage(Image.open("yelloworange_square.png")) 
-orange2 = ImageTk.PhotoImage(Image.open("orange2_square.png")) 
+white = ImageTk.PhotoImage(Image.open("squares/white_square.png"))
+black = ImageTk.PhotoImage(Image.open("squares/black_square.png")) 
+blue0 = ImageTk.PhotoImage(Image.open("squares/blue0_square.png")) 
+blue1 = ImageTk.PhotoImage(Image.open("squares/blue1_square.png")) 
+orange = ImageTk.PhotoImage(Image.open("squares/orange_square.png")) 
+yorange = ImageTk.PhotoImage(Image.open("squares/yelloworange_square.png")) 
+orange2 = ImageTk.PhotoImage(Image.open("squares/orange2_square.png")) 
 
 
 M = [0 for _ in range(N*N)]
